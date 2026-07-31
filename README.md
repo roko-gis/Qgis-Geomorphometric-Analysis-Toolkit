@@ -7,7 +7,7 @@ Qgis Geomorphometric Analysis Toolkit — a scientific open-source framework for
 
 [![Quality gate status](https://sonarcloud.io/api/project_badges/measure?project=roko-gis_Qgis-Geomorphometric-Analysis-Toolkit&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=roko-gis_Qgis-Geomorphometric-Analysis-Toolkit)
 
-# Geomorphometric Analysis Toolkit
+# Qgis Geomorphometric Analysis Toolkit
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21718929.svg)](https://doi.org/10.5281/zenodo.21718929)
 
