@@ -1,0 +1,174 @@
+# Installation and Dependencies
+
+This document describes the software requirements, dependencies, and installation procedure for the **Qgis Geomorphometric Analysis Toolkit**.
+
+---
+
+## System Requirements
+
+The toolkit is designed to run within the QGIS Python environment.
+
+Recommended environment:
+
+| Component | Requirement |
+|-----------|-------------|
+| Operating System | Windows 10/11 (64-bit) |
+| QGIS | Version 3.x (LTR recommended) |
+| Python | Python version included with QGIS |
+| Architecture | 64-bit |
+
+The toolkit is developed and tested primarily on Windows with QGIS 3.x LTR releases. Linux and macOS QGIS installations should also be compatible when the required dependencies are available.
+
+---
+
+# Software Dependencies
+
+The toolkit requires:
+
+- **QGIS 3.x**
+- **Python 3.x** (included with QGIS)
+- **PyQGIS API**
+- **NumPy**
+- **SciPy**
+- **GDAL**
+- **PyQt5**
+
+All required Python libraries are normally included in a standard QGIS installation.
+
+No external proprietary software is required.
+
+---
+
+# Installation
+
+## Method 1 — Standalone Python File (Recommended)
+
+The toolkit is distributed as a single Python file for maximum portability and ease of use.
+
+Installation steps:
+
+1. Download the latest version from the GitHub repository.
+2. Open QGIS.
+3. Open the QGIS Python Console.
+4. Load or execute the toolkit Python file.
+5. Run the tool from the QGIS environment.
+
+No additional installation or package management is required.
+
+---
+
+## Method 2 — Clone Repository
+
+Clone the repository:
+
+```bash
+git clone https://github.com/<username>/geomorphometric-analysis-toolkit.git
+```
+
+Navigate to the project directory:
+
+```bash
+cd geomorphometric-analysis-toolkit
+```
+
+Open the main Python script using QGIS Python tools.
+
+---
+
+# Verifying Installation
+
+A successful installation should allow:
+
+- loading the toolkit without Python errors;
+- opening DEM raster datasets;
+- selecting geomorphometric algorithms;
+- executing terrain analysis workflows;
+- generating output raster products.
+
+If the graphical interface starts correctly and DEM processing completes successfully, the installation is complete.
+
+---
+
+# Python Package Verification
+
+The required libraries can be verified from the QGIS Python Console:
+
+```python
+import numpy
+import scipy
+from osgeo import gdal
+
+print("Dependencies successfully loaded")
+```
+
+If no errors are returned, the required scientific computing environment is available.
+
+---
+
+# Recommended DEM Requirements
+
+For optimal performance:
+
+- Use projected raster datasets with metric units.
+- Ensure DEM cell size is correctly defined.
+- Remove invalid or corrupted raster values before processing.
+- Use appropriate spatial resolution for the selected geomorphometric analysis.
+
+Large DEM datasets may require sufficient system memory depending on:
+
+- raster dimensions;
+- selected algorithm;
+- analysis window size;
+- processing scale.
+
+---
+
+# Performance Considerations
+
+The toolkit uses optimized numerical operations based on NumPy and SciPy.
+
+Performance depends mainly on:
+
+- DEM size;
+- available RAM;
+- CPU performance;
+- selected algorithm;
+- neighbourhood window parameters.
+
+For very large raster datasets, processing smaller regions or tiled workflows may improve performance.
+
+---
+
+# Troubleshooting
+
+## Missing Python Module
+
+If an import error occurs:
+
+1. Verify that the toolkit is executed inside the QGIS Python environment.
+2. Confirm that the QGIS installation includes the required scientific libraries.
+3. Reinstall or update QGIS if dependencies are missing.
+
+---
+
+## Processing Errors
+
+If an analysis fails:
+
+Check:
+
+- DEM contains valid elevation values;
+- raster contains no unsupported data types;
+- coordinate reference system is correctly defined;
+- processing parameters are appropriate.
+
+---
+
+# Support
+
+For bug reports, feature requests, or scientific feedback, please open an issue in the GitHub repository.
+
+---
+
+**Qgis Geomorphometric Analysis Toolkit**  
+An Open-Source QGIS Tool for Multi-Scale Terrain Analysis using Digital Elevation Models (DEMs)
